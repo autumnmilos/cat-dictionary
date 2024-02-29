@@ -1,3 +1,4 @@
+/* Cat Grid Container */
 .cat-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(31.25rem, 1fr));
@@ -5,12 +6,9 @@
     padding: 1rem;
     justify-content: center;
   }
-
-  .cat-card p {
-    font-family: 'Segoe UI', sans-serif;
-  }
   
-  .cat-card {
+  /* Cat Card Styles */
+  .cat-block {
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -19,50 +17,57 @@
     transition: transform 300ms;
   }
   
-  .cat-card p {
-    margin: 0.5rem 0;
+  /* Cat Card Text Styles */
+  .cat-block p {
+    font-family: 'Segoe UI', sans-serif;
+    margin: .5rem 0;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-align: left;
     font-size: 2rem;
     font-weight: bold;
     margin-left: 1rem;
     color: black;
-    text-align: left; 
   }
   
-  .cat-card p:last-child {
+
+  .cat-block p:last-child {
     font-size: 1.7rem;
-    text-align: left;
   }
   
-  .cat-card button {
+  /* Cat Card Button Styles */
+  .cat-block button {
     width: 100%;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     background-color: rgb(255, 255, 255);
     outline: none;
     border: none;
-    transition: background-color 300ms, color 300ms; 
-    position: relative; 
+    transition: background-color 300ms, color 300ms;
+    position: relative;
   }
   
-  .cat-card button::before {
-    content: ''; 
+  .cat-block button::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0); 
-    transition: background-color 300ms; 
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 300ms;
   }
   
-  .cat-card:hover button::before {
-    background-color: rgba(255, 255, 255, 0.7); 
+  /* Cat Card Hover Effects */
+  .cat-block:hover button::before {
+    background-color: rgba(255, 255, 255, 0.7);
   }
   
-  .cat-card button:hover {
+  .cat-block button:hover {
     color: lightgrey;
   }
   
+  /* Cat Image Styles */
   .cat-image {
     width: 95%;
     height: 95%;
@@ -74,6 +79,7 @@
     transition: transform 300ms;
   }
   
+  /* Right Arrow Icon Styles */
   .arrow {
     width: 6rem;
     height: 2rem;

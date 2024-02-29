@@ -7,6 +7,7 @@ const CatCard: React.FC = () => {
 const { id, url } = useParams<{ id: string; url: string }>();
 const [catDetails, setCatDetails] = useState<CatDetails | null>(null);
 
+// Fetch cat details when the component mounts or when 'id' changes
 useEffect(() => {
     const fetchData = async () => {
         const details = await fetchCatDetails(id ?? '');
@@ -18,12 +19,14 @@ useEffect(() => {
 }, [id]);
 
   return (
-    <div className='cat-card2'>
+    <div className='cat-card'>
+      {/* Display the cat image */}
       <img
         src={url}
         alt={`Cat-${id}`}
       />
 
+{/* Display cat details if available */}
 {catDetails && (
   <div>
   <p>{catDetails.name}</p>
@@ -32,6 +35,8 @@ useEffect(() => {
   <p><strong>Life Span:</strong> {catDetails.life_span}</p>
   <p><strong>Weight:</strong> {catDetails.weight.imperial} lbs</p>
   <p><strong>Description:</strong> {catDetails.description}</p>
+
+  {/* Button to go back to the previous page */}
   <div className="cat-button-container">
     <button className="cat-button" onClick={() => window.history.back()}>
       Back

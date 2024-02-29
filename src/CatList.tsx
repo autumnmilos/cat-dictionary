@@ -4,10 +4,11 @@ import rightArrow from './assets/rightArrow.svg';
 import { CatImage, fetchCatImages, fetchCatName } from './api';
 import './CatList.css';
 
-const CatGrid: React.FC = () => {
+const CatList: React.FC = () => {
   const [catImages, setCatImages] = useState<CatImage[]>([]);
   const [catNames, setCatNames] = useState<Record<string, string>>({});
 
+  // Fetch cat images when component mounts
   useEffect(() => {
     const fetchData = async () => {
       const images = await fetchCatImages();
@@ -17,6 +18,7 @@ const CatGrid: React.FC = () => {
     fetchData();
   }, []);
 
+  // Fetch cat names corresponding to their IDs when catImages state is updated
   useEffect(() => {
     const fetchNames = async () => {
       const names: Record<string, string> = {};
@@ -36,25 +38,26 @@ const CatGrid: React.FC = () => {
     }
   }, [catImages]);
 
-  
-
   return (
     <div className="cat-grid">
+      {/* Map through cat images to display individual cat cards */}
       {catImages.map((catImage) => (
-        
-          <div className='cat-card'>
-            <img className='cat-image'
-              src={catImage.url}
-              alt={`Cat-${catImage.id}`}
-            />
-            <p>{catNames[catImage.id]}</p>
-            <Link key={catImage.id} to={`/cat/${catImage.id}/${encodeURIComponent(catImage.url)}`}>
-            <button> <p>Read Breed Profile <img className='arrow' src={rightArrow} alt="Right Arrow" /></p></button>
-            </Link>
-          </div>
+        <div className='cat-block' key={catImage.id}>
+          {/* Display cat image */}
+          <img className='cat-image' src={catImage.url} alt={`Cat-${catImage.id}`} />
+          {/* Display cat name */}
+          <p>{catNames[catImage.id]}</p>
+          {/* Link to cat's profile with a button */}
+          <Link to={`/cat/${catImage.id}/${encodeURIComponent(catImage.url)}`}>
+            <button>
+              {/* Button text with an arrow icon */}
+              <p>Read Breed Profile <img className='arrow' src={rightArrow} alt="Right Arrow" /></p>
+            </button>
+          </Link>
+        </div>
       ))}
     </div>
   );
 };
 
-export default CatGrid;
+export default CatList;

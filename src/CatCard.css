@@ -1,14 +1,16 @@
-.cat-card2 {
+/* Cat Card Container */
+.cat-card {
     max-width: 100%;
     margin: 0 auto;
     padding: 1rem;
     background-color: #fff;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 1rem lightblue;
     border-radius: 1rem;
     display: flex;
   }
   
-  .cat-card2 img {
+  /* Cat Image Styles */
+  .cat-card img {
     width: 62.5rem;
     height: 62.5rem;
     aspect-ratio: 1/1;
@@ -18,38 +20,39 @@
     transition: transform 300ms;
   }
   
-  .cat-card2 div {
+  /* Text Container Styles */
+  .cat-card div {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
-  .cat-card2 p {
+  /* Text Paragraph Styles */
+  .cat-card p {
     margin: 1rem 0;
     margin-left: 4rem;
     margin-bottom: 3rem;
     font-size: 2rem;
   }
-
   
-  
-  .cat-card2 p:first-child {
+  .cat-card p:first-child {
     font-size: 3rem;
     font-weight: bold;
   }
   
-  .cat-card2 p:last-child {
+  .cat-card p:last-child {
     margin-bottom: 1rem;
   }
   
-
+  /* Button Container Styles */
   .cat-button-container {
-    margin: .5rem 0;
+    margin: 0.5rem 0;
     margin-left: 4rem;
     margin-bottom: 3rem;
     font-size: 2rem;
   }
   
+  /* Cat Button Styles */
   .cat-button {
-    font-size: 1.7rem; 
+    font-size: 1.7rem;
     outline: none;
     border: none;
     transition: background-color 300ms, color 300ms;
@@ -68,7 +71,8 @@
     transition: background-color 300ms;
   }
   
-  .cat-button::before {
+  /* Button Hover Effect Styles */
+  .cat-button:hover::before {
     background-color: rgba(255, 255, 255, 0);
   }
   
