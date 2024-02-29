@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import rightArrow from './assets/rightArrow.svg';
 import { CatImage, fetchCatImages, fetchCatName } from './api';
+import './CatList.css';
 
 const CatGrid: React.FC = () => {
   const [catImages, setCatImages] = useState<CatImage[]>([]);
@@ -34,19 +36,22 @@ const CatGrid: React.FC = () => {
     }
   }, [catImages]);
 
+  
+
   return (
     <div className="cat-grid">
       {catImages.map((catImage) => (
-        <Link key={catImage.id} to={`/cat/${catImage.id}/${encodeURIComponent(catImage.url)}`}>
-          <div style={{ textAlign: 'center' }}>
-            <img
+        
+          <div className='cat-card'>
+            <img className='cat-image'
               src={catImage.url}
               alt={`Cat-${catImage.id}`}
-              style={{ width: '500px', height: '500px', margin: '5px', objectFit: 'cover' }}
             />
             <p>{catNames[catImage.id]}</p>
+            <Link key={catImage.id} to={`/cat/${catImage.id}/${encodeURIComponent(catImage.url)}`}>
+            <button> <p>Read Breed Profile <img className='arrow' src={rightArrow} alt="Right Arrow" /></p></button>
+            </Link>
           </div>
-        </Link>
       ))}
     </div>
   );

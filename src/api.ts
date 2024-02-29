@@ -5,7 +5,7 @@ export interface CatImage {
   
   export const fetchCatImages = async (): Promise<CatImage[]> => {
     try {
-      const response = await fetch('https://api.thecatapi.com/v1/images/search?limit=20&has_breeds=true');
+      const response = await fetch('https://api.thecatapi.com/v1/images/search?limit=10&has_breeds=true');
       const data = await response.json();
       return data;
     } catch (error) {

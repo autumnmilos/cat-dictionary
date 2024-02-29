@@ -1,2 +1,84 @@
+.cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(31.25rem, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+  }
 
+  .cat-card p {
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .cat-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem lightblue;
+    transition: transform 300ms;
+  }
+  
+  .cat-card p {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 1rem;
+    color: black;
+    text-align: left; 
+  }
+  
+  .cat-card p:last-child {
+    font-size: 1.7rem;
+    text-align: left;
+  }
+  
+  .cat-card button {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    outline: none;
+    border: none;
+    transition: background-color 300ms, color 300ms; 
+    position: relative; 
+  }
+  
+  .cat-card button::before {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0); 
+    transition: background-color 300ms; 
+  }
+  
+  .cat-card:hover button::before {
+    background-color: rgba(255, 255, 255, 0.7); 
+  }
+  
+  .cat-card button:hover {
+    color: lightgrey;
+  }
+  
+  .cat-image {
+    width: 95%;
+    height: 95%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 1rem;
+    align-self: center;
+    box-shadow: 0 0 1rem #00000055;
+    transition: transform 300ms;
+  }
+  
+  .arrow {
+    width: 6rem;
+    height: 2rem;
+    margin-left: 4rem;
+    position: absolute;
+    transition: transform 300ms, fill 300ms;
+  }
   
