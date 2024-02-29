@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Cat Dictionary App is a web application that allows users to explore a collection of cat images, along with details about each cat's breed. Users can click on individual cat cards to view more information about a specific cat's breed profile.
+The Cat Dictionary App is a web application that allows users to explore a collection of cat images, along with details about each cat's breed. Users can click on individual cat cards to view more information about a specific cat's breed profile. 🐾
 
 ## Usage
 
@@ -18,8 +18,6 @@ The Cat Dictionary App is a web application that allows users to explore a colle
    - Use the back button or simply click on Cat Dictionary to easily navigate back to the homepage.
 
 ## Dependencies
-
-The Cat Dictionary App relies on the following technologies:
 
 - **React**
 - **React Router**
