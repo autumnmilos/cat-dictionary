@@ -1,21 +1,34 @@
+# Cat Dictionary App
 
-Cat Dictionary App
-
-Overview
+## Overview
 
 The Cat Dictionary App is a web application that allows users to explore a collection of cat images, along with details about each cat's breed. Users can click on individual cat cards to view more information about a specific cat's breed profile.
 
+## Usage
 
+1. **Navigate to the homepage:**
 
-Usage
+   - See a grid of cat images.
 
-Navigate to the homepage to see a grid of cat images.
-Click on a cat card to view more details about the specific cat's breed.
-Click the back button to navigate back to the homepage
+2. **Explore Cat Breed Details:**
 
+   - Click on a cat card to view detailed information about the specific cat's breed.
 
-Dependencies
+3. **Navigate back to homepage:**
+   - Use the back button or simply click on Cat Dictionary to easily navigate back to the homepage.
 
-React
-React Router
-CSS (styled with professional and responsive design)
+## Dependencies
+
+The Cat Dictionary App relies on the following technologies:
+
+- **React**
+- **React Router**
+- **CSS**
+
+## Getting Started
+
+To get started with the Cat Dictionary App, follow these steps:
+
+1. Clone the repository.
+2. Install dependencies using `npm install`.
+3. Run the app with `npm start`.
