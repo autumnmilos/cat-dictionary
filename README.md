@@ -36,6 +36,6 @@ To get started with the Cat Dictionary App on the main branch, follow these step
 To get started with the Cat Dictionary App on the scratch branch, follow these steps:
 
 1. Clone the repository.
-2. Install dependencies using 'npm install'
-3. Run the app with 'npm start'
+2. Install dependencies using `npm install`.
+3. Run the app with `npm start`.
 
