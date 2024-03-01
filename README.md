@@ -4,7 +4,7 @@
 
 The Cat Dictionary App is a web application that allows users to explore a collection of cat images, along with details about each cat's breed. Users can click on individual cat cards to view more information about a specific cat's breed profile. 🐾
 
-There are two versions of this app. On branch main, the app is built off of vite and on branch 'scratch', the app is built completely from scratch.
+There are two versions of this app. On branch main, the app is built off of vite and on branch scratch, the app is built completely from scratch.
 
 ## Usage
 
