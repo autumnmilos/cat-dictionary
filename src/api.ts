@@ -43,7 +43,7 @@ export interface CatImage {
         life_span: string;
         weight: {
         imperial: string;
-        metric: string;
+        metric: string;    
         };
         description: string;
     }
